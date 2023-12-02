@@ -167,7 +167,7 @@ public class SysMenuController {
     @GetMapping("/current")
     @ApiOperation(value = "查询当前用户菜单")
     public List<SysMenu> findMyMenu(@LoginUser SysUser user) {
-        List<SysRole> roles = user.getRoles();
+        List<SysRole> roles = user.getRoles(); // 先获取role
         if (CollectionUtil.isEmpty(roles)) {
             return Collections.emptyList();
         }
