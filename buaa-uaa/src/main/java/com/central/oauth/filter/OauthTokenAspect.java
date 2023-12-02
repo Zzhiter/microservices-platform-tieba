@@ -26,7 +26,7 @@ import java.util.Map;
  * 1. 赋值租户
  * 2. 统一返回token格式
  *
- * @author zlt
+ * @author buaa
  * @date 2020/3/29
  * <p>
  * Blog: https://zlt2000.gitee.io

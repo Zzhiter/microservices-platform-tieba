@@ -1,4 +1,4 @@
-#  zlt-microservices-platform
+#  buaa-microservices-platform
 
 <p align="center">
   <img src="https://img.shields.io/badge/Version-5.5.0-critical" alt="Downloads"/>
@@ -47,7 +47,7 @@
 * **演示环境地址**： [http://zlt2000.cn](http://zlt2000.cn/)
   * 账号密码：admin/admin
   * APM监控账号密码：admin/admin
-  * Grafana账号：zlt/zlt123
+  * Grafana账号：buaa/zlt123
   * 任务管理账号密码：admin/123456
 * **演示环境有全方位的监控示例：日志系统 + APM系统 + GPE系统**
 * Gitee地址：https://gitee.com/zlt2000/microservices-platform
@@ -65,39 +65,39 @@
 ## 4. 模块说明
 ```lua
 central-platform -- 父项目，公共依赖
-│  ├─zlt-business -- 业务模块一级工程
+│  ├─buaa-business -- 业务模块一级工程
 │  │  ├─user-center -- 用户中心[7000]
 │  │  ├─file-center -- 文件中心[5000]
 │  │  ├─code-generator -- 代码生成器[7300]
 │  │  ├─search-center -- 搜索中心
 │  │  │  ├─search-client -- 搜索中心客户端
 │  │  │  ├─search-server -- 搜索中心服务端[7100]
-│  │─zlt-commons -- 通用工具一级工程
-│  │  ├─zlt-auth-client-spring-boot-starter -- 封装spring security client端的通用操作逻辑
-│  │  ├─zlt-common-core -- 封装通用操作逻辑
-│  │  ├─zlt-common-spring-boot-starter -- 封装通用操作逻辑
-│  │  ├─zlt-db-spring-boot-starter -- 封装数据库通用操作逻辑
-│  │  ├─zlt-log-spring-boot-starter -- 封装log通用操作逻辑
-│  │  ├─zlt-redis-spring-boot-starter -- 封装Redis通用操作逻辑
-│  │  ├─zlt-loadbalancer-spring-boot-starter -- 封装Loadbalancer和Feign的通用操作逻辑
-│  │  ├─zlt-sentinel-spring-boot-starter -- 封装Sentinel的通用操作逻辑
-│  │  ├─zlt-swagger2-spring-boot-starter -- 封装Swagger通用操作逻辑
-│  │  ├─zlt-elasticsearch-spring-boot-starter -- 封装Elasticsearch通用操作逻辑
-│  │  ├─zlt-oss-spring-boot-starter -- 封装对象存储通用操作逻辑
-│  │  ├─zlt-zookeeper-spring-boot-starter -- 封装Zookeeper通用操作逻辑
-│  ├─zlt-config -- 配置中心
-│  ├─zlt-doc -- 项目文档
-│  ├─zlt-gateway -- api网关一级工程
+│  │─buaa-commons -- 通用工具一级工程
+│  │  ├─buaa-auth-client-spring-boot-starter -- 封装spring security client端的通用操作逻辑
+│  │  ├─buaa-common-core -- 封装通用操作逻辑
+│  │  ├─buaa-common-spring-boot-starter -- 封装通用操作逻辑
+│  │  ├─buaa-db-spring-boot-starter -- 封装数据库通用操作逻辑
+│  │  ├─buaa-log-spring-boot-starter -- 封装log通用操作逻辑
+│  │  ├─buaa-redis-spring-boot-starter -- 封装Redis通用操作逻辑
+│  │  ├─buaa-loadbalancer-spring-boot-starter -- 封装Loadbalancer和Feign的通用操作逻辑
+│  │  ├─buaa-sentinel-spring-boot-starter -- 封装Sentinel的通用操作逻辑
+│  │  ├─buaa-swagger2-spring-boot-starter -- 封装Swagger通用操作逻辑
+│  │  ├─buaa-elasticsearch-spring-boot-starter -- 封装Elasticsearch通用操作逻辑
+│  │  ├─buaa-oss-spring-boot-starter -- 封装对象存储通用操作逻辑
+│  │  ├─buaa-zookeeper-spring-boot-starter -- 封装Zookeeper通用操作逻辑
+│  ├─buaa-config -- 配置中心
+│  ├─buaa-doc -- 项目文档
+│  ├─buaa-gateway -- api网关一级工程
 │  │  ├─sc-gateway -- spring-cloud-gateway[9900]
-│  ├─zlt-monitor -- 监控一级工程
+│  ├─buaa-monitor -- 监控一级工程
 │  │  ├─sc-admin -- 应用监控[6500]
 │  │  ├─log-center -- 日志中心[7200]
-│  ├─zlt-uaa -- spring-security认证中心[8000]
-│  ├─zlt-register -- 注册中心Nacos[8848]
-│  ├─zlt-web -- 前端一级工程
+│  ├─buaa-uaa -- spring-security认证中心[8000]
+│  ├─buaa-register -- 注册中心Nacos[8848]
+│  ├─buaa-web -- 前端一级工程
 │  │  ├─layui-web -- layui前端[8066]
 │  │  ├─react-web -- react前端[8066]
-│  ├─zlt-demo -- demo一级工程
+│  ├─buaa-demo -- demo一级工程
 │  │  ├─txlcn-demo -- txlcn分布式事务demo
 │  │  ├─seata-demo -- seata分布式事务demo
 │  │  ├─sharding-jdbc-demo -- sharding-jdbc分库分表demo

@@ -11,7 +11,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 /**
-* @author zlt
+* @author buaa
  * 角色
  */
 @Mapper

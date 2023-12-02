@@ -6,7 +6,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.social.security.SocialUserDetails;
 
 /**
- * @author zlt
+ * @author buaa
  * @date 2018/12/28
  * <p>
  * Blog: https://zlt2000.gitee.io

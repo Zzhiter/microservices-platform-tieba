@@ -7,7 +7,7 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.annotation.Import;
 
 /**
- * @author zlt
+ * @author buaa
  * @date 2021/2/13
  * <p>
  * Blog: https://zlt2000.gitee.io

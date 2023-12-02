@@ -8,7 +8,7 @@ import org.springframework.cloud.context.config.annotation.RefreshScope;
 /**
  * mybatis-plus 配置
  *
- * @author zlt
+ * @author buaa
  * @date 2020/4/5
  * <p>
  * Blog: https://zlt2000.gitee.io
@@ -16,7 +16,7 @@ import org.springframework.cloud.context.config.annotation.RefreshScope;
  */
 @Setter
 @Getter
-@ConfigurationProperties(prefix = "zlt.mybatis-plus.auto-fill")
+@ConfigurationProperties(prefix = "buaa.mybatis-plus.auto-fill")
 @RefreshScope
 public class MybatisPlusAutoFillProperties {
     /**

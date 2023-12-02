@@ -20,7 +20,7 @@ import java.util.Map;
 /**
  * feign拦截器，只包含http相关数据
  *
- * @author zlt
+ * @author buaa
  * @date 2019/10/26
  * <p>
  * Blog: https://zlt2000.gitee.io

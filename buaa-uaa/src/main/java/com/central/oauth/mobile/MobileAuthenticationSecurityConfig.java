@@ -13,7 +13,7 @@ import javax.annotation.Resource;
 /**
  * mobile的相关处理配置
  *
- * @author zlt
+ * @author buaa
  * <p>
  * Blog: https://zlt2000.gitee.io
  * Github: https://github.com/zlt2000

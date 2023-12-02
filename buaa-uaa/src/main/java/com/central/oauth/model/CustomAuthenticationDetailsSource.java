@@ -11,7 +11,7 @@ import javax.servlet.http.HttpSession;
 /**
  * 表单登录的认证信息对象
  *
- * @author zlt
+ * @author buaa
  * @version 1.0
  * @date 2021/7/21
  * <p>

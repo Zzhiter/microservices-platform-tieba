@@ -1,4 +1,4 @@
-package org.zlt.config;
+package org.buaa.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -7,7 +7,7 @@ import org.springframework.web.socket.server.standard.ServerEndpointExporter;
 /**
  * WebSocket配置
  *
- * @author zlt
+ * @author buaa
  * @version 1.0
  * @date 2022/5/8
  * <p>

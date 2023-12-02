@@ -11,14 +11,14 @@ import org.springframework.context.annotation.Configuration;
 /**
  * 动态路由配置
  *
- * @author zlt
+ * @author buaa
  * @date 2019/10/7
  * <p>
  * Blog: https://zlt2000.gitee.io
  * Github: https://github.com/zlt2000
  */
 @Configuration
-@ConditionalOnProperty(prefix = "zlt.gateway.dynamicRoute", name = "enabled", havingValue = "true")
+@ConditionalOnProperty(prefix = "buaa.gateway.dynamicRoute", name = "enabled", havingValue = "true")
 public class DynamicRouteConfig {
     @Autowired
     private ApplicationEventPublisher publisher;
@@ -27,7 +27,7 @@ public class DynamicRouteConfig {
      * Nacos实现方式
      */
     @Configuration
-    @ConditionalOnProperty(prefix = "zlt.gateway.dynamicRoute", name = "dataType", havingValue = "nacos", matchIfMissing = true)
+    @ConditionalOnProperty(prefix = "buaa.gateway.dynamicRoute", name = "dataType", havingValue = "nacos", matchIfMissing = true)
     public class NacosDynRoute {
         @Autowired
         private NacosConfigProperties nacosConfigProperties;

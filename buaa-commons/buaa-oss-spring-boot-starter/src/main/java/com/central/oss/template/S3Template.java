@@ -32,7 +32,7 @@ import java.util.Calendar;
 /**
  * aws s3配置
  *
- * @author zlt
+ * @author buaa
  * @date 2021/2/11
  * <p>
  * Blog: https://zlt2000.gitee.io

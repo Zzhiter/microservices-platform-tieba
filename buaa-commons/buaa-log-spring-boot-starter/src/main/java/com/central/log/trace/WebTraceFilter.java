@@ -17,7 +17,7 @@ import java.io.IOException;
 /**
  * web过滤器，生成日志链路追踪id，并赋值MDC
  *
- * @author zlt
+ * @author buaa
  * @date 2020/10/14
  * <p>
  * Blog: https://zlt2000.gitee.io

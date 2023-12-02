@@ -19,7 +19,7 @@ import java.util.*;
 /**
  * 统一登出服务
  *
- * @author zlt
+ * @author buaa
  * @version 1.0
  * @date 2021/10/21
  * <p>

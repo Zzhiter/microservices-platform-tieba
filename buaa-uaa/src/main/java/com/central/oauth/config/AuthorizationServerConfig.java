@@ -39,7 +39,7 @@ import java.util.Set;
 /**
  * OAuth2 授权服务器配置
  *
- * @author zlt
+ * @author buaa
  * @date 2018/10/24
  * <p>
  * Blog: https://zlt2000.gitee.io

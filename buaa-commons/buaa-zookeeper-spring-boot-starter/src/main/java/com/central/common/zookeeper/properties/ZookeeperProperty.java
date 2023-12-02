@@ -7,7 +7,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 /**
  * zookeeper配置
  *
- * @author zlt
+ * @author buaa
  * @version 1.0
  * @date 2021/4/3
  * <p>
@@ -16,7 +16,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  */
 @Setter
 @Getter
-@ConfigurationProperties(prefix = "zlt.zookeeper")
+@ConfigurationProperties(prefix = "buaa.zookeeper")
 public class ZookeeperProperty {
     /**
      * zk连接集群，多个用逗号隔开

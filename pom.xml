@@ -3,7 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.zlt</groupId>
+    <groupId>com.buaa</groupId>
     <artifactId>central-platform</artifactId>
     <version>5.6.0</version>
     <packaging>pom</packaging>
@@ -56,10 +56,10 @@
         <aws-java-sdk-s3.version>1.12.40</aws-java-sdk-s3.version>
         <spring-cloud-starter-oauth2.version>2.2.5.RELEASE</spring-cloud-starter-oauth2.version>
         <docker-maven-plugin.version>1.2.2</docker-maven-plugin.version>
-        <sonar.exclusions>zlt-job/**/*, zlt-register/**/*, zlt-web/**/*</sonar.exclusions>
+        <sonar.exclusions>buaa-job/**/*, buaa-register/**/*, buaa-web/**/*</sonar.exclusions>
         <docker.baseImage>openjdk:8-jre-alpine</docker.baseImage>
         <docker.volumes>/tmp</docker.volumes>
-        <docker.image.prefix>hub.zlt.com:8080/microservices-platform</docker.image.prefix>
+        <docker.image.prefix>hub.buaa.com:8080/microservices-platform</docker.image.prefix>
         <docker.java.security.egd>-Djava.security.egd=file:/dev/./urandom</docker.java.security.egd>
         <docker.java.opts>-Xms128m -Xmx128m</docker.java.opts>
         <guava.version>20.0</guava.version>
@@ -101,58 +101,58 @@
         <dependencies>
             <!-- 自定义 starter -->
             <dependency>
-                <groupId>com.zlt</groupId>
-                <artifactId>zlt-common-spring-boot-starter</artifactId>
+                <groupId>com.buaa</groupId>
+                <artifactId>buaa-common-spring-boot-starter</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.zlt</groupId>
-                <artifactId>zlt-db-spring-boot-starter</artifactId>
+                <groupId>com.buaa</groupId>
+                <artifactId>buaa-db-spring-boot-starter</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.zlt</groupId>
-                <artifactId>zlt-log-spring-boot-starter</artifactId>
+                <groupId>com.buaa</groupId>
+                <artifactId>buaa-log-spring-boot-starter</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.zlt</groupId>
-                <artifactId>zlt-redis-spring-boot-starter</artifactId>
+                <groupId>com.buaa</groupId>
+                <artifactId>buaa-redis-spring-boot-starter</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.zlt</groupId>
-                <artifactId>zlt-swagger2-spring-boot-starter</artifactId>
+                <groupId>com.buaa</groupId>
+                <artifactId>buaa-swagger2-spring-boot-starter</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.zlt</groupId>
-                <artifactId>zlt-loadbalancer-spring-boot-starter</artifactId>
+                <groupId>com.buaa</groupId>
+                <artifactId>buaa-loadbalancer-spring-boot-starter</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.zlt</groupId>
-                <artifactId>zlt-auth-client-spring-boot-starter</artifactId>
+                <groupId>com.buaa</groupId>
+                <artifactId>buaa-auth-client-spring-boot-starter</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.zlt</groupId>
-                <artifactId>zlt-sentinel-spring-boot-starter</artifactId>
+                <groupId>com.buaa</groupId>
+                <artifactId>buaa-sentinel-spring-boot-starter</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.zlt</groupId>
-                <artifactId>zlt-config</artifactId>
+                <groupId>com.buaa</groupId>
+                <artifactId>buaa-config</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.zlt</groupId>
-                <artifactId>zlt-common-core</artifactId>
+                <groupId>com.buaa</groupId>
+                <artifactId>buaa-common-core</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.zlt</groupId>
-                <artifactId>zlt-elasticsearch-spring-boot-starter</artifactId>
+                <groupId>com.buaa</groupId>
+                <artifactId>buaa-elasticsearch-spring-boot-starter</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
@@ -285,7 +285,7 @@
                 <version>${fastdfs-client.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.zlt</groupId>
+                <groupId>com.buaa</groupId>
                 <artifactId>search-client</artifactId>
                 <version>${project.version}</version>
             </dependency>
@@ -365,13 +365,13 @@
                 <version>${dubbo.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.zlt</groupId>
-                <artifactId>zlt-oss-spring-boot-starter</artifactId>
+                <groupId>com.buaa</groupId>
+                <artifactId>buaa-oss-spring-boot-starter</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.zlt</groupId>
-                <artifactId>zlt-zookeeper-spring-boot-starter</artifactId>
+                <groupId>com.buaa</groupId>
+                <artifactId>buaa-zookeeper-spring-boot-starter</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
@@ -486,21 +486,21 @@
 
     <modules>
         <!-- 公共 -->
-        <module>zlt-commons</module>
+        <module>buaa-commons</module>
         <!-- 认证 -->
-        <module>zlt-uaa</module>
+        <module>buaa-uaa</module>
         <!-- 网关 -->
-        <module>zlt-gateway</module>
+        <module>buaa-gateway</module>
         <!-- 业务 -->
-        <module>zlt-business</module>
+        <module>buaa-business</module>
         <!-- 前端 -->
-        <module>zlt-web</module>
+        <module>buaa-web</module>
         <!-- 监控 -->
-        <module>zlt-monitor</module>
+        <module>buaa-monitor</module>
         <!-- 配置 -->
-        <module>zlt-config</module>
+        <module>buaa-config</module>
         <!-- demo -->
-        <module>zlt-demo</module>
+        <module>buaa-demo</module>
     </modules>
 
     <licenses>

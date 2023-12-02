@@ -1,4 +1,4 @@
-package org.zlt.config;
+package org.buaa.config;
 
 import com.central.oauth2.common.config.DefaultResourceServerConf;
 import org.springframework.context.annotation.Configuration;
@@ -7,7 +7,7 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 /**
  * security资源服务器配置
  *
- * @author zlt
+ * @author buaa
  * @version 1.0
  * @date 2022/6/25
  * <p>

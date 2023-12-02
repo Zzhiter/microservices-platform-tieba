@@ -7,7 +7,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 /**
  * RestTemplate 配置
  *
- * @author zlt
+ * @author buaa
  * @date 2017/11/17
  * <p>
  * Blog: https://zlt2000.gitee.io
@@ -15,7 +15,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  */
 @Setter
 @Getter
-@ConfigurationProperties(prefix = "zlt.rest-template")
+@ConfigurationProperties(prefix = "buaa.rest-template")
 public class RestTemplateProperties {
     /**
      * 最大链接数

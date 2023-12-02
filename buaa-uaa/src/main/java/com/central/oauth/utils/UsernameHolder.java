@@ -1,7 +1,7 @@
 package com.central.oauth.utils;
 
 /**
- * @author zlt
+ * @author buaa
  * @version 1.0
  * @date 2021/10/22
  * <p>

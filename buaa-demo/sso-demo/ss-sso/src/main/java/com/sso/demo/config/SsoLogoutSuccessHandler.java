@@ -16,7 +16,7 @@ import java.io.IOException;
 /**
  * 登出成功处理类
  *
- * @author zlt
+ * @author buaa
  * @date 2020/3/10
  * <p>
  * Blog: https://zlt2000.gitee.io
@@ -24,7 +24,7 @@ import java.io.IOException;
  */
 @Component
 public class SsoLogoutSuccessHandler implements LogoutSuccessHandler {
-	@Value("${zlt.logout-uri:''}")
+	@Value("${buaa.logout-uri:''}")
 	private String logoutUri;
 
 	private RedirectStrategy redirectStrategy = new DefaultRedirectStrategy();

@@ -10,7 +10,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * 日志追踪工具类
  *
- * @author zlt
+ * @author buaa
  * @date 2020/10/14
  * <p>
  * Blog: https://zlt2000.gitee.io

@@ -10,7 +10,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UserDetails;
 
 /**
- * @author zlt
+ * @author buaa
  * <p>
  * Blog: https://zlt2000.gitee.io
  * Github: https://github.com/zlt2000

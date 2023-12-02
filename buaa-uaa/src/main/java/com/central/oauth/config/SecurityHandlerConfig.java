@@ -25,7 +25,7 @@ import java.io.IOException;
 /**
  * 认证错误处理
  *
- * @author zlt
+ * @author buaa
  */
 @Slf4j
 @Configuration

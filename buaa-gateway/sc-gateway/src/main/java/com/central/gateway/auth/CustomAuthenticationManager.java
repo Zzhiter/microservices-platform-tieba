@@ -10,7 +10,7 @@ import org.springframework.security.oauth2.server.resource.BearerTokenAuthentica
 import reactor.core.publisher.Mono;
 
 /**
- * @author zlt
+ * @author buaa
  * @date 2019/10/6
  * <p>
  * Blog: https://zlt2000.gitee.io

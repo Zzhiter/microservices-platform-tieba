@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * zookeeper分布式锁实现
  *
- * @author zlt
+ * @author buaa
  * @version 1.0
  * @date 2021/4/3
  * <p>
@@ -23,7 +23,7 @@ import java.util.concurrent.TimeUnit;
  * Github: https://github.com/zlt2000
  */
 @Component
-@ConditionalOnProperty(prefix = "zlt.lock", name = "lockerType", havingValue = "ZK")
+@ConditionalOnProperty(prefix = "buaa.lock", name = "lockerType", havingValue = "ZK")
 public class ZookeeperDistributedLock implements DistributedLock {
     @Resource
     private CuratorFramework client;

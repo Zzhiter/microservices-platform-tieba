@@ -26,7 +26,7 @@ import java.util.UUID;
 /**
  * 重写 DefaultTokenServices，实现登录同应用同账号互踢
  *
- * @author zlt
+ * @author buaa
  * @date 2021/1/28
  * <p>
  * Blog: https://zlt2000.gitee.io

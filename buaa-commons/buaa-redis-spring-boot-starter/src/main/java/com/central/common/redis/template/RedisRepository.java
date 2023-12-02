@@ -19,7 +19,7 @@ import java.util.concurrent.TimeUnit;
  * Redis Repository
  * redis 基本操作 可扩展,基本够用了
  *
- * @author zlt
+ * @author buaa
  * <p>
  * Blog: https://zlt2000.gitee.io
  * Github: https://github.com/zlt2000

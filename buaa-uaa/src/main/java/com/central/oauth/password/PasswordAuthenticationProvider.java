@@ -19,7 +19,7 @@ import org.springframework.util.Assert;
 /**
  * 扩展用户名密码provider
  *
- * @author zlt
+ * @author buaa
  * @version 1.0
  * @date 2021/7/24
  * <p>

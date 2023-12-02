@@ -9,7 +9,7 @@ import org.springframework.messaging.MessageChannel;
 /**
  * 配置消息生产者
  *
- * @author zlt
+ * @author buaa
  */
 @EnableBinding({MySource.class})
 public class RocketMqConfig {

@@ -21,7 +21,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.*;
 
 /**
- * @author zlt
+ * @author buaa
  * @date 2020/3/10
  * <p>
  * Blog: https://zlt2000.gitee.io
@@ -30,19 +30,19 @@ import java.util.*;
 @Slf4j
 @RestController
 public class ApiController {
-    @Value("${zlt.sso.client-id:}")
+    @Value("${buaa.sso.client-id:}")
     private String clientId;
 
-    @Value("${zlt.sso.client-secret:}")
+    @Value("${buaa.sso.client-secret:}")
     private String clientSecret;
 
-    @Value("${zlt.sso.redirect-uri:}")
+    @Value("${buaa.sso.redirect-uri:}")
     private String redirectUri;
 
-    @Value("${zlt.sso.access-token-uri:}")
+    @Value("${buaa.sso.access-token-uri:}")
     private String accessTokenUri;
 
-    @Value("${zlt.sso.user-info-uri:}")
+    @Value("${buaa.sso.user-info-uri:}")
     private String userInfoUri;
 
     private final static Map<String, Map<String, Object>> localTokenMap = new HashMap<>();

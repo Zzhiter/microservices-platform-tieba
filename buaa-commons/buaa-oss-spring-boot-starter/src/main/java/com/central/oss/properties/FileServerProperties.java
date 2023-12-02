@@ -5,7 +5,7 @@ import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
- * @author zlt
+ * @author buaa
  * @date 2021/2/11
  * <p>
  * Blog: https://zlt2000.gitee.io
@@ -15,7 +15,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @Getter
 @ConfigurationProperties(prefix = FileServerProperties.PREFIX)
 public class FileServerProperties {
-    public static final String PREFIX = "zlt.file-server";
+    public static final String PREFIX = "buaa.file-server";
     public static final String TYPE_FDFS = "fastdfs";
     public static final String TYPE_S3 = "s3";
 

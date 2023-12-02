@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * redis分布式锁实现
  *
- * @author zlt
+ * @author buaa
  * @date 2018/5/29 14:16
  * <p>
  * Blog: https://zlt2000.gitee.io

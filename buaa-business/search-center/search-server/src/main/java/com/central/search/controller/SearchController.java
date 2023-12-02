@@ -15,7 +15,7 @@ import java.io.IOException;
 /**
  * 通用搜索
  *
- * @author zlt
+ * @author buaa
  */
 @Slf4j
 @RestController

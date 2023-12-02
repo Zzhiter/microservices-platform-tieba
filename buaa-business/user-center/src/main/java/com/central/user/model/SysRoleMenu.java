@@ -5,7 +5,7 @@ import com.baomidou.mybatisplus.extension.activerecord.Model;
 import lombok.*;
 
 /**
- * @author zlt
+ * @author buaa
  * @date 2019/7/30
  */
 @Setter

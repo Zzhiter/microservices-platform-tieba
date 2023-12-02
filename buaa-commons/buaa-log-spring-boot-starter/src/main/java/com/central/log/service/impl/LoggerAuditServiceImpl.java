@@ -11,7 +11,7 @@ import java.time.format.DateTimeFormatter;
 /**
  * 审计日志实现类-打印日志
  *
- * @author zlt
+ * @author buaa
  * @date 2020/2/3
  * <p>
  * Blog: https://zlt2000.gitee.io
@@ -19,7 +19,7 @@ import java.time.format.DateTimeFormatter;
  */
 @Slf4j
 @Service
-@ConditionalOnProperty(name = "zlt.audit-log.log-type", havingValue = "logger", matchIfMissing = true)
+@ConditionalOnProperty(name = "buaa.audit-log.log-type", havingValue = "logger", matchIfMissing = true)
 public class LoggerAuditServiceImpl implements IAuditService {
     private static final String MSG_PATTERN = "{}|{}|{}|{}|{}|{}|{}|{}";
 

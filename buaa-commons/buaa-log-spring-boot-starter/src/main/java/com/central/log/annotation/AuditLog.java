@@ -3,7 +3,7 @@ package com.central.log.annotation;
 import java.lang.annotation.*;
 
 /**
- * @author zlt
+ * @author buaa
  * @date 2020/2/3
  * <p>
  * Blog: https://zlt2000.gitee.io

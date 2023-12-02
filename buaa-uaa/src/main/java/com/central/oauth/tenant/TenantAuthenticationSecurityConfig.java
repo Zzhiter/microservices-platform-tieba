@@ -8,7 +8,7 @@ import org.springframework.security.web.DefaultSecurityFilterChain;
 import org.springframework.stereotype.Component;
 
 /**
- * @author zlt
+ * @author buaa
  * @date 2020/6/10
  * <p>
  * Blog: https://zlt2000.gitee.io

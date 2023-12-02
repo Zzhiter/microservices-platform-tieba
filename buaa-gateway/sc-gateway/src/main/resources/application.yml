@@ -44,7 +44,7 @@ spring:
           filters:
             - PreserveHostHeader
         - id: user
-          uri: lb://user-center
+          uri: lb://buaa-user-center
           predicates:
             - Path=/api-user/**
           filters:

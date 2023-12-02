@@ -8,7 +8,7 @@ import org.springframework.data.redis.listener.RedisMessageListenerContainer;
 /**
  *
  * redis过期key监听器配置类
- * @author zlt
+ * @author buaa
  *
  */
 @Configuration

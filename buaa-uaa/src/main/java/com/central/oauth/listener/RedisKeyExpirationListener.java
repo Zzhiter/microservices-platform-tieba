@@ -19,7 +19,7 @@ import org.springframework.stereotype.Component;
 /**
  *
  * redis过期key监听器
- * @author zlt
+ * @author buaa
  *
  */
 @Component

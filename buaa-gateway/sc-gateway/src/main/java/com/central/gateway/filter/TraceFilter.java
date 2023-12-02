@@ -14,7 +14,7 @@ import reactor.core.publisher.Mono;
 /**
  * 生成日志链路追踪id，并传入header中
  *
- * @author zlt
+ * @author buaa
  * @date 2019/10/7
  * <p>
  * Blog: https://zlt2000.gitee.io

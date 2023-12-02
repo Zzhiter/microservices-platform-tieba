@@ -1,4 +1,4 @@
-#  zlt-microservices-platform
+#  buaa-microservices-platform
 
 <p align="center">
   <img src="https://img.shields.io/badge/Version-5.5.0-critical" alt="Downloads"/>
@@ -47,7 +47,7 @@
 * **Demo**： [http://zlt2000.cn](http://zlt2000.cn/)
   * Account：admin/admin
   * APM monitoring: admin/admin
-  * Grafana：zlt/zlt123
+  * Grafana：buaa/zlt123
   * Task managment：admin/123456
 * **The demonstration environment has a full range of monitoring examples: log system + APM system + GPE system**
 * Gitee address：https://gitee.com/zlt2000/microservices-platform
@@ -65,39 +65,39 @@
 ## 4. 模块说明
 ```lua
 central-platform -- parent project, public dependencies
-│  ├─zlt-business -- Business module first-level engineering
+│  ├─buaa-business -- Business module first-level engineering
 │  │  ├─user-center -- User Center[7000]
 │  │  ├─file-center -- document center[5000]
 │  │  ├─code-generator -- Code generator[7300]
 │  │  ├─search-center -- search Center
 │  │  │  ├─search-client -- Search Center client
 │  │  │  ├─search-server -- Search Center Server[7100]
-│  │─zlt-commons -- General tool first-level engineering
-│  │  ├─zlt-auth-client-spring-boot-starter -- Encapsulate the general operation logic of spring security client
-│  │  ├─zlt-common-core -- Encapsulate common operation logic
-│  │  ├─zlt-common-spring-boot-starter -- Encapsulate common operation logic
-│  │  ├─zlt-db-spring-boot-starter -- Encapsulate the general operation logic of the database
-│  │  ├─zlt-log-spring-boot-starter -- Encapsulate log general operation logic
-│  │  ├─zlt-redis-spring-boot-starter -- Encapsulate Redis general operation logic
-│  │  ├─zlt-loadbalancer-spring-boot-starter -- Encapsulate the general operation logic of Loadbalancer and Feign
-│  │  ├─zlt-sentinel-spring-boot-starter -- Encapsulate Sentinel's general operation logic
-│  │  ├─zlt-swagger2-spring-boot-starter -- Encapsulate Swagger general operation logic
-│  │  ├─zlt-elasticsearch-spring-boot-starter -- Encapsulate Elasticsearch general operation logic
-│  │  ├─zlt-oss-spring-boot-starter -- Encapsulate object storage general operation logic
-│  │  ├─zlt-zookeeper-spring-boot-starter -- Encapsulate Zookeeper general operation logic
-│  ├─zlt-config -- configuration center
-│  ├─zlt-doc -- project documentation
-│  ├─zlt-gateway -- api gateway first level engineering
+│  │─buaa-commons -- General tool first-level engineering
+│  │  ├─buaa-auth-client-spring-boot-starter -- Encapsulate the general operation logic of spring security client
+│  │  ├─buaa-common-core -- Encapsulate common operation logic
+│  │  ├─buaa-common-spring-boot-starter -- Encapsulate common operation logic
+│  │  ├─buaa-db-spring-boot-starter -- Encapsulate the general operation logic of the database
+│  │  ├─buaa-log-spring-boot-starter -- Encapsulate log general operation logic
+│  │  ├─buaa-redis-spring-boot-starter -- Encapsulate Redis general operation logic
+│  │  ├─buaa-loadbalancer-spring-boot-starter -- Encapsulate the general operation logic of Loadbalancer and Feign
+│  │  ├─buaa-sentinel-spring-boot-starter -- Encapsulate Sentinel's general operation logic
+│  │  ├─buaa-swagger2-spring-boot-starter -- Encapsulate Swagger general operation logic
+│  │  ├─buaa-elasticsearch-spring-boot-starter -- Encapsulate Elasticsearch general operation logic
+│  │  ├─buaa-oss-spring-boot-starter -- Encapsulate object storage general operation logic
+│  │  ├─buaa-zookeeper-spring-boot-starter -- Encapsulate Zookeeper general operation logic
+│  ├─buaa-config -- configuration center
+│  ├─buaa-doc -- project documentation
+│  ├─buaa-gateway -- api gateway first level engineering
 │  │  ├─sc-gateway -- spring-cloud-gateway[9900]
-│  ├─zlt-monitor -- Monitor first-class engineering
+│  ├─buaa-monitor -- Monitor first-class engineering
 │  │  ├─sc-admin -- application monitoring[6500]
 │  │  ├─log-center -- log center[7200]
-│  ├─zlt-uaa -- spring-security authentication center[8000]
-│  ├─zlt-register -- Registration Center Nacos[8848]
-│  ├─zlt-web -- Front-end first-level engineering
+│  ├─buaa-uaa -- spring-security authentication center[8000]
+│  ├─buaa-register -- Registration Center Nacos[8848]
+│  ├─buaa-web -- Front-end first-level engineering
 │  │  ├─layui-web -- layui frontend[8066]
 │  │  ├─react-web -- react front end[8066]
-│  ├─zlt-demo -- demo level one project
+│  ├─buaa-demo -- demo level one project
 │  │  ├─txlcn-demo -- txlcn distributed transaction demo
 │  │  ├─seata-demo -- seata distributed transaction demo
 │  │  ├─sharding-jdbc-demo -- sharding-jdbc database sub-table demo

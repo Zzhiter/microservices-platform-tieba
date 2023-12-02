@@ -1,10 +1,10 @@
-package org.zlt;
+package org.buaa;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * @author zlt
+ * @author buaa
  * @date 2022/6/25
  * <p>
  * Blog: https://zlt2000.gitee.io

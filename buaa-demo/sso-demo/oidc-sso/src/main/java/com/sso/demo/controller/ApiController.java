@@ -29,7 +29,7 @@ import java.security.interfaces.RSAPublicKey;
 import java.util.*;
 
 /**
- * @author zlt
+ * @author buaa
  * @date 2020/5/22
  * <p>
  * Blog: https://zlt2000.gitee.io
@@ -41,19 +41,19 @@ public class ApiController {
     private static final String PUBKEY_START = "-----BEGIN PUBLIC KEY-----";
     private static final String PUBKEY_END = "-----END PUBLIC KEY-----";
 
-    @Value("${zlt.sso.client-id:}")
+    @Value("${buaa.sso.client-id:}")
     private String clientId;
 
-    @Value("${zlt.sso.client-secret:}")
+    @Value("${buaa.sso.client-secret:}")
     private String clientSecret;
 
-    @Value("${zlt.sso.redirect-uri:}")
+    @Value("${buaa.sso.redirect-uri:}")
     private String redirectUri;
 
-    @Value("${zlt.sso.access-token-uri:}")
+    @Value("${buaa.sso.access-token-uri:}")
     private String accessTokenUri;
 
-    @Value("${zlt.sso.jwt-key-uri:}")
+    @Value("${buaa.sso.jwt-key-uri:}")
     private String jwtKeyUri;
 
     /**

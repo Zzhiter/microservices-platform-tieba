@@ -18,7 +18,7 @@ import org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate;
 /**
  * es自动配置
  *
- * @author zlt
+ * @author buaa
  * @date 2020/3/28
  * <p>
  * Blog: https://zlt2000.gitee.io

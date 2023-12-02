@@ -6,7 +6,7 @@ import com.central.oauth.model.TokenVo;
 import java.util.Map;
 
 /**
- * @author zlt
+ * @author buaa
  */
 public interface ITokensService {
     /**

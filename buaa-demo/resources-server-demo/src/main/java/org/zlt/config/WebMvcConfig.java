@@ -1,4 +1,4 @@
-package org.zlt.config;
+package org.buaa.config;
 
 import com.central.common.config.DefaultWebMvcConfig;
 import org.springframework.context.annotation.Configuration;
@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 /**
  * web服务器配置
  *
- * @author zlt
+ * @author buaa
  * @version 1.0
  * @date 2022/6/25
  * <p>

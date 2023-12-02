@@ -18,7 +18,7 @@ import java.util.*;
 /**
  * 系统日志
  *
- * @author zlt
+ * @author buaa
  */
 @RestController
 public class SysLogController {

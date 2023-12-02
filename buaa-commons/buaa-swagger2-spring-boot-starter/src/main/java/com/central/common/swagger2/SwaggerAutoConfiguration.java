@@ -37,7 +37,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
- * @author zlt
+ * @author buaa
  * @date 2018/11/18 9:22
  * <p>
  * Blog: https://zlt2000.gitee.io
@@ -60,7 +60,7 @@ public class SwaggerAutoConfiguration implements BeanFactoryAware {
 
     @Bean
     @ConditionalOnMissingBean
-    @ConditionalOnProperty(name = "zlt.swagger.enabled", matchIfMissing = true)
+    @ConditionalOnProperty(name = "buaa.swagger.enabled", matchIfMissing = true)
     public List<Docket> createRestApi(SwaggerProperties swaggerProperties) {
         ConfigurableBeanFactory configurableBeanFactory = (ConfigurableBeanFactory) beanFactory;
         List<Docket> docketList = new LinkedList<>();

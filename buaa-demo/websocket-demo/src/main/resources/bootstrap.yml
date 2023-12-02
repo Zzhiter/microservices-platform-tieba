@@ -1,0 +1,14 @@
+server:
+  port: 8092
+
+spring:
+  application:
+    name: buaa-websocket
+  main:
+    allow-bean-definition-overriding: true
+
+buaa:
+  security:
+    ignore:
+      httpUrls: >
+        /websocket/**

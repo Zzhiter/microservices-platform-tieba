@@ -36,7 +36,7 @@ import java.util.List;
 /**
  * token授权模式配置类
  *
- * @author zlt
+ * @author buaa
  * @date 2020/7/11
  * <p>
  * Blog: https://zlt2000.gitee.io

@@ -8,7 +8,7 @@ import org.springframework.cloud.context.config.annotation.RefreshScope;
 /**
  * 审计日志配置
  *
- * @author zlt
+ * @author buaa
  * @date 2020/2/3
  * <p>
  * Blog: https://zlt2000.gitee.io
@@ -16,7 +16,7 @@ import org.springframework.cloud.context.config.annotation.RefreshScope;
  */
 @Setter
 @Getter
-@ConfigurationProperties(prefix = "zlt.audit-log")
+@ConfigurationProperties(prefix = "buaa.audit-log")
 @RefreshScope
 public class AuditLogProperties {
     /**

@@ -20,7 +20,7 @@ import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 import org.springframework.web.client.RestTemplate;
 
 /**
- * @author zlt
+ * @author buaa
  * @date 2018/11/17
  * <p>
  * Blog: https://zlt2000.gitee.io

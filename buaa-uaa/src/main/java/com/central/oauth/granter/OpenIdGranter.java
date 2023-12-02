@@ -14,7 +14,7 @@ import java.util.Map;
 /**
  * openId授权模式
  *
- * @author zlt
+ * @author buaa
  * @date 2020/7/11
  * <p>
  * Blog: https://zlt2000.gitee.io

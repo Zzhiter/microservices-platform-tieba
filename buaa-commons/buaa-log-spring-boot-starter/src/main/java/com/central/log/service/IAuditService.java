@@ -5,7 +5,7 @@ import com.central.log.model.Audit;
 /**
  * 审计日志接口
  *
- * @author zlt
+ * @author buaa
  * @date 2020/2/3
  * <p>
  * Blog: https://zlt2000.gitee.io

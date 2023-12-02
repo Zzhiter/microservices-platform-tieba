@@ -8,7 +8,7 @@ import org.apache.dubbo.rpc.*;
 /**
  * dubbo过滤器，传递traceId
  *
- * @author zlt
+ * @author buaa
  * @date 2021/1/30
  * <p>
  * Blog: https://zlt2000.gitee.io

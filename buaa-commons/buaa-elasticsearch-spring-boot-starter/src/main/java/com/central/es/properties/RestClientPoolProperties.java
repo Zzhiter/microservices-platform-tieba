@@ -8,7 +8,7 @@ import org.springframework.cloud.context.config.annotation.RefreshScope;
 /**
  * es的httpClient连接池配置
  *
- * @author zlt
+ * @author buaa
  * @date 2020/3/28
  * <p>
  * Blog: https://zlt2000.gitee.io
@@ -16,7 +16,7 @@ import org.springframework.cloud.context.config.annotation.RefreshScope;
  */
 @Setter
 @Getter
-@ConfigurationProperties(prefix = "zlt.elasticsearch.rest-pool")
+@ConfigurationProperties(prefix = "buaa.elasticsearch.rest-pool")
 @RefreshScope
 public class RestClientPoolProperties {
     /**

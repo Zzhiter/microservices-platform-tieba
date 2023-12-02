@@ -22,7 +22,7 @@ import java.util.Map;
 /**
  * redis 配置类
  *
- * @author zlt
+ * @author buaa
  * @date 2018/11/6 11:02
  * <p>
  * Blog: https://zlt2000.gitee.io

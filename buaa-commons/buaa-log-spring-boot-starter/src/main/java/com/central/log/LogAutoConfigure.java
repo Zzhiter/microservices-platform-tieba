@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 /**
  * 日志自动配置
  *
- * @author zlt
+ * @author buaa
  * @date 2019/8/13
  */
 @ComponentScan

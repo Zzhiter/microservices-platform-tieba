@@ -15,7 +15,7 @@ import java.util.List;
 /**
  * zookeeper模板类
  *
- * @author zlt
+ * @author buaa
  * @version 1.0
  * @date 2021/4/10
  * <p>

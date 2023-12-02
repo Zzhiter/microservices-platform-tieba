@@ -23,7 +23,7 @@ import java.util.Map;
 /**
  * token管理服务(redis token)
  *
- * @author zlt
+ * @author buaa
  * @date 2019/7/12
  * <p>
  * Blog: https://zlt2000.gitee.io

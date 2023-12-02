@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.Map;
 
 /**
- * @author zlt
+ * @author buaa
  * @date 2019/4/24
  */
 public interface IAggregationService {

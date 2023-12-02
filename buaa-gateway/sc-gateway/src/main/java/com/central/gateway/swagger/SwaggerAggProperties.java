@@ -11,7 +11,7 @@ import java.util.Set;
 /**
  * swagger聚合配置
  *
- * @author zlt
+ * @author buaa
  * @date 2019/10/5
  * <p>
  * Blog: https://zlt2000.gitee.io
@@ -19,7 +19,7 @@ import java.util.Set;
  */
 @Setter
 @Getter
-@ConfigurationProperties("zlt.swagger-agg")
+@ConfigurationProperties("buaa.swagger-agg")
 @RefreshScope
 public class SwaggerAggProperties {
     /**

@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * 慢查询日志
  *
- * @author zlt
+ * @author buaa
  */
 @RestController
 public class SlowQueryLogController {

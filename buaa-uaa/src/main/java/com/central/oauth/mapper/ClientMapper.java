@@ -11,7 +11,7 @@ import org.apache.ibatis.annotations.Param;
 import com.central.oauth.model.Client;
 
 /**
- * @author zlt
+ * @author buaa
  */
 @Mapper
 public interface ClientMapper extends SuperMapper<Client> {

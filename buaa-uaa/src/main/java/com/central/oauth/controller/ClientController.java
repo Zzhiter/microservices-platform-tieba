@@ -17,7 +17,7 @@ import java.util.Map;
 /**
  * 应用相关接口
  *
- * @author zlt
+ * @author buaa
  * <p>
  * Blog: https://zlt2000.gitee.io
  * Github: https://github.com/zlt2000

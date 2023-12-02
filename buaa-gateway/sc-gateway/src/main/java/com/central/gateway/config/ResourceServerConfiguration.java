@@ -18,7 +18,7 @@ import org.springframework.security.web.server.authentication.ServerAuthenticati
 /**
  * 资源服务器配置
  *
- * @author zlt
+ * @author buaa
  * @date 2019/10/5
  * <p>
  * Blog: https://zlt2000.gitee.io

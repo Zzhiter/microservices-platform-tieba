@@ -3,7 +3,7 @@ package com.central.generator.model;
 import java.util.List;
 
 /**
- * @Author: zlt
+ * @Author: buaa
  */
 public class TableEntity {
     /**

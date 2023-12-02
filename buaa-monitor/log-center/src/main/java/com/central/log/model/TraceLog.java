@@ -6,7 +6,7 @@ import lombok.Setter;
 /**
  * 日志链路对象
  *
- * @author zlt
+ * @author buaa
  * @version 1.0
  * @date 2022/1/27
  * <p>

@@ -8,7 +8,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 /**
  * 增加租户id，解决不同租户单点登录时角色没变化
  *
- * @author zlt
+ * @author buaa
  * @date 2020/6/10
  * <p>
  * Blog: https://zlt2000.gitee.io

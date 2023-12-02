@@ -13,7 +13,7 @@ import static com.central.oauth2.common.constants.IdTokenClaimNames.*;
 /**
  * Oidc协议的IdToken
  *
- * @author zlt
+ * @author buaa
  * @version 1.0
  * @date 2021/4/21
  * <p>

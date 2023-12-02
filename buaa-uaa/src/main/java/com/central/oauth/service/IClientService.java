@@ -8,7 +8,7 @@ import com.central.oauth.model.Client;
 import java.util.Map;
 
 /**
- * @author zlt
+ * @author buaa
  * <p>
  * Blog: https://zlt2000.gitee.io
  * Github: https://github.com/zlt2000

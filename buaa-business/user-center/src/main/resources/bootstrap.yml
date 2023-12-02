@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: user-center
+    name: buaa-user-center
 #  cloud:
 #    nacos:
 #      discovery:

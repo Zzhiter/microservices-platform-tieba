@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 /**
- * @author zlt
+ * @author buaa
  */
 @RestController
 public class UserController {

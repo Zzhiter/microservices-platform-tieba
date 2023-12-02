@@ -22,7 +22,7 @@ import org.springframework.context.annotation.Bean;
 /**
  * mybatis-plus自动配置
  *
- * @author zlt
+ * @author buaa
  * @date 2020/4/5
  * <p>
  * Blog: https://zlt2000.gitee.io
@@ -72,7 +72,7 @@ public class MybatisPlusAutoConfigure {
 
     @Bean
     @ConditionalOnMissingBean
-    @ConditionalOnProperty(prefix = "zlt.mybatis-plus.auto-fill", name = "enabled", havingValue = "true", matchIfMissing = true)
+    @ConditionalOnProperty(prefix = "buaa.mybatis-plus.auto-fill", name = "enabled", havingValue = "true", matchIfMissing = true)
     public MetaObjectHandler metaObjectHandler() {
         return new DateMetaObjectHandler(autoFillProperties);
     }

@@ -19,7 +19,7 @@ import static org.springframework.cloud.gateway.support.ServerWebExchangeUtils.G
 /**
  * 传递负载均衡隔离值
  *
- * @author zlt
+ * @author buaa
  * @date 2019/10/7
  * <p>
  * Blog: https://zlt2000.gitee.io

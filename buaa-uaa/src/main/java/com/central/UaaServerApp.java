@@ -7,7 +7,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /** 
-* @author zlt
+* @author buaa
 */
 @EnableFeignClients
 @EnableFeignInterceptor
@@ -17,7 +17,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 public class UaaServerApp {
 	public static void main(String[] args) {
 		SpringApplication application = new SpringApplication(UaaServerApp.class);
-		application.setEnvironmentPrefix("zlt-uaa");
+		application.setEnvironmentPrefix("buaa-uaa");
 		application.run(args);
 	}
 }

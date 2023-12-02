@@ -7,12 +7,12 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import java.util.List;
 
 /**
- * @author zlt
+ * @author buaa
  * @date 2019/1/6
  */
 @Setter
 @Getter
-@ConfigurationProperties(prefix = "zlt.cache-manager")
+@ConfigurationProperties(prefix = "buaa.cache-manager")
 public class CacheManagerProperties {
     private List<CacheConfig> configs;
 

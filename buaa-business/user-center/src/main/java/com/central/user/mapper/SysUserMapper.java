@@ -12,7 +12,7 @@ import java.util.Map;
 /**
  * 用户表 Mapper 接口
  *
- * @author zlt
+ * @author buaa
  * @data 2018-10-29
  */
 @Mapper

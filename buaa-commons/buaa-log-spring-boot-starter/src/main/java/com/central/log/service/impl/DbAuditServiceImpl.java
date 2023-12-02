@@ -20,7 +20,7 @@ import javax.sql.DataSource;
 /**
  * 审计日志实现类-数据库
  *
- * @author zlt
+ * @author buaa
  * @date 2020/2/8
  * <p>
  * Blog: https://zlt2000.gitee.io
@@ -28,7 +28,7 @@ import javax.sql.DataSource;
  */
 @Slf4j
 @Service
-@ConditionalOnProperty(name = "zlt.audit-log.log-type", havingValue = "db")
+@ConditionalOnProperty(name = "buaa.audit-log.log-type", havingValue = "db")
 @ConditionalOnClass(JdbcTemplate.class)
 public class DbAuditServiceImpl implements IAuditService {
     private static final String INSERT_SQL = " insert into sys_logger " +

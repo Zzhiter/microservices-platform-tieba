@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: sso-demo
+
+buaa:
+  api-uaa:
+    url: http://127.0.0.1:9900/api-uaa/oauth
+  logout-uri: ${buaa.api-uaa.url}/remove/token?redirect_uri=http://127.0.0.1:8080&access_token=
+
+security:
+  oauth2:
+    sso:
+      login-path: /singleLogin
+    client:
+      client-id: buaa
+      client-secret: buaa
+      access-token-uri: ${buaa.api-uaa.url}/token
+      user-authorization-uri: ${buaa.api-uaa.url}/authorize
+    resource:
+      token-info-uri: ${buaa.api-uaa.url}/check_token

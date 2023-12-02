@@ -1,7 +1,7 @@
-package org.zlt.service;
+package org.buaa.service;
 
 /**
- * @author zlt
+ * @author buaa
  * @date 2020/1/30
  * <p>
  * Blog: https://zlt2000.gitee.io

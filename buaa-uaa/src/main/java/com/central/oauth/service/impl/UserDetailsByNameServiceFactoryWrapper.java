@@ -11,7 +11,7 @@ import org.springframework.util.Assert;
 /**
  * 重写 UserDetailsByNameServiceWrapper 支持多帐户类型
  *
- * @author zlt
+ * @author buaa
  * @version 1.0
  * @date 2021/7/24
  * @see UserDetailsByNameServiceWrapper

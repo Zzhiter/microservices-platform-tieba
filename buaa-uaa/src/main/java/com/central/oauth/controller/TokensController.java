@@ -28,7 +28,7 @@ import java.util.stream.Collectors;
 /**
  * token管理接口
  *
- * @author zlt
+ * @author buaa
  */
 @Api(tags = "Token管理")
 @Slf4j

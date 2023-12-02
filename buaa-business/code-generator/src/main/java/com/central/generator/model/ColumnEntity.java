@@ -1,7 +1,7 @@
 package com.central.generator.model;
 
 /**
- * @Author: zlt
+ * @Author: buaa
  */
 public class ColumnEntity {
     /**

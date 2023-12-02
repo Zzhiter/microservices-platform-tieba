@@ -8,7 +8,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 
 /**
- * @author zlt
+ * @author buaa
  * @date 2020/2/22
  * <p>
  * Blog: https://zlt2000.gitee.io

@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * 替换 UsernamePasswordAuthenticationFilter 增加租户id
  *
- * @author zlt
+ * @author buaa
  * @date 2020/6/10
  * <p>
  * Blog: https://zlt2000.gitee.io

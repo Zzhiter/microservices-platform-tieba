@@ -11,7 +11,7 @@ import java.lang.annotation.Target;
 /**
  * 开启feign拦截器传递数据给下游服务，只包含基础数据
  *
- * @author zlt
+ * @author buaa
  * @date 2019/10/26
  * <p>
  * Blog: https://zlt2000.gitee.io

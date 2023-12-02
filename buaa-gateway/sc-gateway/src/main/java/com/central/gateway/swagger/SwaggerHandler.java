@@ -18,7 +18,7 @@ import springfox.documentation.swagger.web.UiConfiguration;
 import springfox.documentation.swagger.web.UiConfigurationBuilder;
 
 /**
- * @author zlt
+ * @author buaa
  * @date 2019/10/5
  * <p>
  * Blog: https://zlt2000.gitee.io
