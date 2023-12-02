@@ -1,0 +1,27 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.buaa</groupId>
+        <artifactId>central-platform</artifactId>
+        <version>5.6.0</version>
+    </parent>
+    <artifactId>buaa-commons</artifactId>
+    <description>通用组件</description>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>buaa-redis-spring-boot-starter</module>
+        <module>buaa-common-spring-boot-starter</module>
+        <module>buaa-db-spring-boot-starter</module>
+        <module>buaa-swagger2-spring-boot-starter</module>
+        <module>buaa-log-spring-boot-starter</module>
+        <module>buaa-loadbalancer-spring-boot-starter</module>
+        <module>buaa-auth-client-spring-boot-starter</module>
+        <module>buaa-sentinel-spring-boot-starter</module>
+        <module>buaa-common-core</module>
+        <module>buaa-elasticsearch-spring-boot-starter</module>
+        <module>buaa-oss-spring-boot-starter</module>
+        <module>buaa-zookeeper-spring-boot-starter</module>
+    </modules>
+</project>

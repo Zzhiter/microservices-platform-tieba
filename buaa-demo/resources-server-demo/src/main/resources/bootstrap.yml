@@ -1,0 +1,14 @@
+server:
+  port: 8093
+
+spring:
+  application:
+    name: buaa-resources-server
+  main:
+    allow-bean-definition-overriding: true
+
+buaa:
+  security:
+    ignore:
+      httpUrls: >
+        /test/notAuth
