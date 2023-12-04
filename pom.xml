@@ -510,12 +510,4 @@
         </license>
     </licenses>
 
-    <developers>
-        <developer>
-            <name>LeTao Zhu</name>
-            <email>zltdiablo@163.com</email>
-            <organizationUrl>https://github.com/zlt2000</organizationUrl>
-            <url>https://blog.csdn.net/zlt2000</url>
-        </developer>
-    </developers>
 </project>

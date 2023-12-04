@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 用户表 Mapper 接口
+ * 用户表 mapper 接口
  *
  * @author buaa
  * @data 2018-10-29

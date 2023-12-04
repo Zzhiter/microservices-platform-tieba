@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.central.user.mapper.DatasourceManagerMapper">
+<!--	<select id="queryList" resultType="java.util.Map">-->
+<!--		SELECT * FROM sys_tables-->
+<!--		<where>-->
+<!--			<if test="p.table_name != null and p.table_name != ''">-->
+<!--				AND table_name LIKE CONCAT('%', #{p.table_name}, '%')-->
+<!--			</if>-->
+<!--			&lt;!&ndash; Add other conditions as needed &ndash;&gt;-->
+<!--		</where>-->
+<!--	</select>-->
+    <select id="queryAll" resultType="java.util.Map">
+        SELECT * FROM sys_tables;
+    </select>
+</mapper>
