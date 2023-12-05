@@ -41,4 +41,15 @@ public class DatasourceManagerServiceImpl extends SuperServiceImpl<DatasourceMan
                 .count((long) allData.size()) // 设置总数为数据的总条数
                 .build();
     }
+
+    @Override
+    public PageResult<String> queryTableNames() {
+        List<String> tableNames = datasourceManagerMapper.queryTableNames();
+
+        return PageResult.<String>builder()
+                .data(tableNames)
+                .code(0)
+                .count((long)tableNames.size())
+                .build();
+    }
 }

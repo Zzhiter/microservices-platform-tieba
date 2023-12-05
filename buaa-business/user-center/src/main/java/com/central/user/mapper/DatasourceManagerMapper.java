@@ -20,4 +20,6 @@ public interface DatasourceManagerMapper extends SuperMapper<SysTables> {
 
     // 新增方法：查询所有数据
     List<Map<String, Object>> queryAll();
+
+    List<String> queryTableNames();
 }

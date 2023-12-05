@@ -14,4 +14,5 @@ import java.util.Map;
 public interface IDatasourceManagerService extends ISuperService<SysTables> {
     PageResult queryList(Map<String, Object> map);
     PageResult queryAll();
+    PageResult queryTableNames();
 }

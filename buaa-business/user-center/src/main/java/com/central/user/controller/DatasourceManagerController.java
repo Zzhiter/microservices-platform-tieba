@@ -33,4 +33,10 @@ public class DatasourceManagerController {
         // 这里假设你的服务层有一个查询所有数据的方法
         return datasourceManagerService.queryAll();
     }
+
+    @ResponseBody
+    @GetMapping("/names")
+    public PageResult getTableNames() {
+        return datasourceManagerService.queryTableNames();
+    }
 }
