@@ -12,6 +12,8 @@ mybatis-plus:
   global-config:
     db-config:
       id-type: auto
+  configuration:
+    log-impl: org.apache.ibatis.logging.log4j.Log4jImpl
 
 buaa:
   swagger:

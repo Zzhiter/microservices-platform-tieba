@@ -17,4 +17,9 @@
     <select id="queryTableNames" resultType="java.lang.String">
         select table_name from sys_tables;
     </select>
+    <select id="queryTableIdByName" resultType="java.lang.Long" parameterType="java.lang.String">
+        SELECT table_id
+        FROM sys_tables
+        WHERE table_name = #{tableName}
+    </select>
 </mapper>

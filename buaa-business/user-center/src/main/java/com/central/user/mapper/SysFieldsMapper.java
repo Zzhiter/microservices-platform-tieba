@@ -16,13 +16,7 @@ import java.util.Map;
  */
 @Component
 @Mapper
-public interface DatasourceManagerMapper extends SuperMapper<SysTables> {
-    List<Map<String, Object>> queryList(Page<Map<String, Object>> page, @Param("p") Map<String, Object> map);
+public interface SysFieldsMapper extends SuperMapper<SysFields> {
 
-    // 新增方法：查询所有数据
-    List<Map<String, Object>> queryAll();
-
-    List<String> queryTableNames();
-
-    Long queryTableIdByName(String tableName);
+    List<SysFields> queryTableColumns(Long tableId);
 }

@@ -15,4 +15,8 @@ public interface IDatasourceManagerService extends ISuperService<SysTables> {
     PageResult queryList(Map<String, Object> map);
     PageResult queryAll();
     PageResult queryTableNames();
+
+    PageResult queryTableColumns(String tableName);
+
+    Long queryTableIdByName(String tableName);
 }
