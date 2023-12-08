@@ -38,8 +38,8 @@ public class DatasourceManagerServiceImpl extends SuperServiceImpl<DatasourceMan
     }
 
     @Override
-    public PageResult<Map<String, Object>> queryAll() {
-        List<Map<String, Object>> allData = datasourceManagerMapper.queryAll(); // 假设你有一个查询所有数据的方法
+    public PageResult<Map<String, Object>> queryAll(int page, int pageSize, String tableName) {
+        List<Map<String, Object>> allData = datasourceManagerMapper.queryAll(page, pageSize, tableName); // 假设你有一个查询所有数据的方法
 
         return PageResult.<Map<String, Object>>builder()
                 .data(allData)

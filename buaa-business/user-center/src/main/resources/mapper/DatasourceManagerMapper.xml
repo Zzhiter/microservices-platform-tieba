@@ -11,8 +11,14 @@
 <!--			&lt;!&ndash; Add other conditions as needed &ndash;&gt;-->
 <!--		</where>-->
 <!--	</select>-->
+<!--    <select id="queryAll" resultType="java.util.Map" parameterType="java.lang.String">-->
+<!--        SELECT * FROM  #{tableName};-->
+<!--    </select>-->
     <select id="queryAll" resultType="java.util.Map">
-        SELECT * FROM sys_tables;
+        SELECT * FROM ${tableName}
+        <if test="page >= 0 and pageSize > 0">
+            LIMIT #{page}, #{pageSize}
+        </if>
     </select>
     <select id="queryTableNames" resultType="java.lang.String">
         select table_name from sys_tables;

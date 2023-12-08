@@ -29,9 +29,15 @@ public class DatasourceManagerController {
 
     @ResponseBody
     @GetMapping("/all")
-    public PageResult getAllTables() {
-        return datasourceManagerService.queryAll();
+    public PageResult getAllTables(
+            @RequestParam int page,
+            @RequestParam int pageSize,
+            @RequestParam String tableName
+    ) {
+        // 在这里使用 page、pageSize、tableName 进行查询操作
+        return datasourceManagerService.queryAll(page, pageSize, tableName);
     }
+
 
     @ResponseBody
     @GetMapping("/names")

@@ -13,7 +13,7 @@ import java.util.Map;
 @Service
 public interface IDatasourceManagerService extends ISuperService<SysTables> {
     PageResult queryList(Map<String, Object> map);
-    PageResult queryAll();
+    PageResult queryAll(int page, int pageSize, String tableName);
     PageResult queryTableNames();
 
     PageResult queryTableColumns(String tableName);
