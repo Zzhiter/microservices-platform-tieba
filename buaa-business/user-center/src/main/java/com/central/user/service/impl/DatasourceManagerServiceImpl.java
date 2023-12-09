@@ -19,6 +19,7 @@ import org.springframework.util.StringUtils;
 import javax.annotation.Resource;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -95,17 +96,33 @@ public class DatasourceManagerServiceImpl extends SuperServiceImpl<DatasourceMan
             String fieldName = field.getName();
 
             // Check if the params map contains a value for the field
-            if (params.containsKey(fieldName)) {
-                // Get the value from the params map
-                Object value = params.get(fieldName);
-                if (Objects.equals(fieldName, "uid")) {
-                    value = Integer.parseInt((String) value);
-                }
+            List<String> integerFields = Arrays.asList("pid", "comments", "type", "uid");
+            boolean isIntegerField = integerFields.contains(fieldName);
 
-                // Use reflection to set the value in the entity object
-                Method setterMethod = entityClass.getMethod("set" + StringUtils.capitalize(fieldName), field.getType());
-                setterMethod.invoke(entityObject, value);
+// Get the value from the params map
+            Object value = params.get(fieldName);
+
+            if (value != null) {
+                if (isIntegerField) {
+                    // Check if the value is an Integer before parsing
+                    if (value instanceof Integer) {
+                        // If it's already an Integer, no need to parse
+                        // You can directly assign it to the target field
+                        // For example, if you have a Post object, use post.setUid((Integer) value);
+                    } else if (value instanceof String) {
+                        // If it's a String, parse it to Integer
+                        value = Integer.parseInt((String) value);
+                    } else {
+                        // Handle other types if necessary
+                        throw new IllegalArgumentException("Unsupported type for field: " + fieldName);
+                    }
+                }
+                // Handle other field types or leave them as they are
             }
+
+            // Use reflection to set the value in the entity object
+            Method setterMethod = entityClass.getMethod("set" + StringUtils.capitalize(fieldName), field.getType());
+            setterMethod.invoke(entityObject, value);
         }
 
         return entityObject;
@@ -123,9 +140,16 @@ public class DatasourceManagerServiceImpl extends SuperServiceImpl<DatasourceMan
                 // Construct a Post object using the provided parameters
                 Post postEntity = constructEntityObject(params, postClass);
 
-                // Now you can use the postEntity as needed
-                // Example: if you want to update the Post record
-                postMapper.updateByPid(postEntity);
+                // Check if the record exists
+                Post existingPost = postMapper.selectById(postEntity.getPid());
+
+                if (existingPost != null) {
+                    // If the record exists, update it
+                    postMapper.updateByPid(postEntity);
+                } else {
+                    // If the record doesn't exist, insert it
+                    postMapper.insert(postEntity);
+                }
 
                 // Handle the result of the updateCount as needed
             }

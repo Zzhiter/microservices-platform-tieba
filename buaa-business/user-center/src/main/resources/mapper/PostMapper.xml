@@ -2,6 +2,11 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.central.user.mapper.PostMapper">
+    <!-- Add this insert statement if you don't have it -->
+    <insert id="insert" parameterType="com.central.user.model.Post">
+        INSERT INTO post (title, text, date, comments, uid, type, tenant_id, state)
+        VALUES (#{title}, #{text}, #{date}, #{comments}, #{uid}, #{type}, #{tenant_id}, #{state})
+    </insert>
     <update id="updateByPid" parameterType="com.central.user.model.Post">
         UPDATE post
         SET
