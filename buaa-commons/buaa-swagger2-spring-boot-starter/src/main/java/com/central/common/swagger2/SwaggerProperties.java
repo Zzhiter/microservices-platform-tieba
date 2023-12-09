@@ -13,8 +13,8 @@ import java.util.Map;
 /**
  * swagger2 属性配置
  *
- * @author buaa
- * @date 2018/11/18 9:17
+ * @author gy
+ * @date 2023/12/9 9:17
  */
 @Data
 @ConfigurationProperties("buaa.swagger")

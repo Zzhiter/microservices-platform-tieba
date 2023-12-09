@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.buaa</groupId>
+        <artifactId>buaa-business</artifactId>
+        <version>5.6.0</version>
+    </parent>
+
+    <artifactId>post-center</artifactId>
+    <description>用户中心</description>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <!-- 公共实体类模块 -->
+        <dependency>
+            <groupId>com.buaa</groupId>
+            <artifactId>buaa-config</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.buaa</groupId>
+            <artifactId>buaa-log-spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.buaa</groupId>
+            <artifactId>buaa-common-spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.buaa</groupId>
+            <artifactId>buaa-db-spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.buaa</groupId>
+            <artifactId>buaa-redis-spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.buaa</groupId>
+            <artifactId>buaa-loadbalancer-spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.buaa</groupId>
+            <artifactId>buaa-sentinel-spring-boot-starter</artifactId>
+        </dependency>
+        <!-- swagger -->
+        <dependency>
+            <groupId>com.buaa</groupId>
+            <artifactId>buaa-swagger2-spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.buaa</groupId>
+            <artifactId>search-client</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.micrometer</groupId>
+            <artifactId>micrometer-registry-prometheus</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.auth0</groupId>
+            <artifactId>java-jwt</artifactId>
+            <version>3.19.0</version>
+        </dependency>
+    </dependencies>
+</project>

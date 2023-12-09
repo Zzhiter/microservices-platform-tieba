@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.central.post.mapper.UserMapper">
+
+    <insert id="insertUser" useGeneratedKeys="true" keyProperty="uid">
+        insert into user (uid, username, password, avatar, email)
+        values (#{uid}, #{username}, #{password}, #{avatar}, #{email})
+    </insert>
+
+    <select id="getUserByUid" resultType="com.central.post.model.User">
+        select *
+        from user
+        where uid = #{uid}
+    </select>
+
+    <select id="getUserByName" resultType="com.central.post.model.User">
+        select uid, username, avatar
+        from user
+        where username like concat('%', #{keyword}, '%')
+           or uid = #{keyword}
+    </select>
+
+    <update id="updateUserPassword">
+        update user
+        set password = #{password}
+        where uid = #{uid}
+    </update>
+
+    <update id="updateUserInfo">
+        update user
+        set username = #{username},
+            avatar   = #{avatar},
+            email    = #{email}
+        where uid = #{uid}
+    </update>
+</mapper>

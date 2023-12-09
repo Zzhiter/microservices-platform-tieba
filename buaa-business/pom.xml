@@ -18,5 +18,7 @@
         <module>code-generator</module>
         <!-- 搜索中心 -->
         <module>search-center</module>
+        <!-- 帖子中心 -->
+        <module>post-center</module>
     </modules>
 </project>
