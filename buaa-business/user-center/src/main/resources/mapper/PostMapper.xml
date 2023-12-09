@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.central.user.mapper.PostMapper">
+    <update id="updateByPid" parameterType="com.central.user.model.Post">
+        UPDATE post
+        SET
+            title = #{title},
+            text = #{text},
+            date = #{date},
+            comments = #{comments},
+            uid = #{uid},
+            type = #{type},
+            tenant_id = #{tenant_id},
+            state = #{state}
+        WHERE pid = #{pid}
+    </update>
+<!--    <update id="updateTable" parameterType="map">-->
+<!--        UPDATE ${tableName}-->
+<!--        SET-->
+<!--        <foreach collection="params" item="value" separator=",">-->
+<!--            ${value} = #{param1[${value}]}-->
+<!--        </foreach>-->
+<!--    </update>-->
+
+
+</mapper>

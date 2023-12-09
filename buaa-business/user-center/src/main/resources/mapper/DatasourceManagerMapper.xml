@@ -2,18 +2,6 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.central.user.mapper.DatasourceManagerMapper">
-<!--	<select id="queryList" resultType="java.util.Map">-->
-<!--		SELECT * FROM sys_tables-->
-<!--		<where>-->
-<!--			<if test="p.table_name != null and p.table_name != ''">-->
-<!--				AND table_name LIKE CONCAT('%', #{p.table_name}, '%')-->
-<!--			</if>-->
-<!--			&lt;!&ndash; Add other conditions as needed &ndash;&gt;-->
-<!--		</where>-->
-<!--	</select>-->
-<!--    <select id="queryAll" resultType="java.util.Map" parameterType="java.lang.String">-->
-<!--        SELECT * FROM  #{tableName};-->
-<!--    </select>-->
     <select id="queryAll" resultType="java.util.Map">
         SELECT * FROM ${tableName}
         <if test="page >= 0 and pageSize > 0">
@@ -28,4 +16,13 @@
         FROM sys_tables
         WHERE table_name = #{tableName}
     </select>
+    <update id="updateTable" parameterType="map">
+        UPDATE ${tableName}
+        SET
+        <foreach collection="params" item="value" separator=",">
+            ${value}
+            =
+            #{params[${value}]}
+        </foreach>
+    </update>
 </mapper>

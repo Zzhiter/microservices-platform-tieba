@@ -50,4 +50,12 @@ public class DatasourceManagerController {
     public PageResult getTableColumns(@RequestParam String tableName) {
         return datasourceManagerService.queryTableColumns(tableName);
     }
+
+    // New endpoint for updating tables
+    @ResponseBody
+    @PostMapping("/{tableName}")
+    public PageResult updateTable(@PathVariable String tableName, @RequestBody Map<String, Object> params) {
+
+        return datasourceManagerService.updateTable(tableName, params);
+    }
 }

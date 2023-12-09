@@ -4,7 +4,9 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.central.common.model.PageResult;
 import com.central.common.service.impl.SuperServiceImpl;
 import com.central.user.mapper.DatasourceManagerMapper;
+import com.central.user.mapper.PostMapper;
 import com.central.user.mapper.SysFieldsMapper;
+import com.central.user.model.Post;
 import com.central.user.model.SysFields;
 import com.central.user.model.SysTables;
 import com.central.user.service.IDatasourceManagerService;
@@ -12,10 +14,14 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections4.MapUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 import javax.annotation.Resource;
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 /**
  * @Author buaa
@@ -28,6 +34,9 @@ public class DatasourceManagerServiceImpl extends SuperServiceImpl<DatasourceMan
 
     @Resource
     SysFieldsMapper sysFieldsMapper;
+
+    @Resource
+    PostMapper postMapper;
 
     @Override
     public PageResult<Map<String, Object>> queryList(Map<String, Object> map) {
@@ -75,6 +84,67 @@ public class DatasourceManagerServiceImpl extends SuperServiceImpl<DatasourceMan
     public Long queryTableIdByName(String tableName) {
         Long tableId = datasourceManagerMapper.queryTableIdByName(tableName);
         return tableId;
+    }
+
+    private <T> T constructEntityObject(Map<String, Object> params, Class<T> entityClass) throws Exception {
+        // Create an instance of the entity class
+        T entityObject = entityClass.getDeclaredConstructor().newInstance();
+
+        // Assume your entity class has setter methods for each field
+        for (Field field : entityClass.getDeclaredFields()) {
+            String fieldName = field.getName();
+
+            // Check if the params map contains a value for the field
+            if (params.containsKey(fieldName)) {
+                // Get the value from the params map
+                Object value = params.get(fieldName);
+                if (Objects.equals(fieldName, "uid")) {
+                    value = Integer.parseInt((String) value);
+                }
+
+                // Use reflection to set the value in the entity object
+                Method setterMethod = entityClass.getMethod("set" + StringUtils.capitalize(fieldName), field.getType());
+                setterMethod.invoke(entityObject, value);
+            }
+        }
+
+        return entityObject;
+    }
+
+
+    @Override
+    public PageResult updateTable(String tableName, Map<String, Object> params) {
+        try {
+            // 这里维护一个映射，通过tableName，获取对应的table的update方法
+            if (Objects.equals(tableName, "post")) {
+                // Assuming you have a Post entity class
+                Class<Post> postClass = Post.class;
+
+                // Construct a Post object using the provided parameters
+                Post postEntity = constructEntityObject(params, postClass);
+
+                // Now you can use the postEntity as needed
+                // Example: if you want to update the Post record
+                postMapper.updateByPid(postEntity);
+
+                // Handle the result of the updateCount as needed
+            }
+
+            // Update was successful
+            return PageResult.<SysFields>builder()
+                    .data(null)
+                    .code(0)
+                    .count(0L)
+                    .build();
+
+        } catch (Exception e) {
+            log.error("Error updating table", e);
+            return PageResult.<SysFields>builder()
+                    .data(null)
+                    .code(-1)
+                    .count(0L)
+                    .build();
+        }
     }
 
 }

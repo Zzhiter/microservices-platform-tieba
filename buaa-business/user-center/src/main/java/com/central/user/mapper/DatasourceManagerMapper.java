@@ -25,4 +25,7 @@ public interface DatasourceManagerMapper extends SuperMapper<SysTables> {
     List<String> queryTableNames();
 
     Long queryTableIdByName(String tableName);
+
+    // Updated method: Update based on tableName
+    void updateTable(@Param("tableName") String tableName, @Param("params") Map<String, Object> params);
 }
