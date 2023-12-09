@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.central.post.mapper.PostMapper">
+
+    <insert id="insertPost" useGeneratedKeys="true" keyProperty="pid">
+        insert into post (pid, title, `date`, comments, uid, type, `text`)
+        values (#{pid}, #{title}, #{date}, #{comments}, #{uid}, #{type}, #{text})
+    </insert>
+
+    <select id="getPostByPid" resultType="com.central.post.model.Post">
+        select *
+        from post
+        where pid = #{pid}
+    </select>
+
+    <select id="getPostByKeyword" resultType="com.central.post.model.Post">
+        select *
+        from post
+        where INSTR(title, #{keyword}) > 0
+          and #{date} > post.date
+        order by post.date desc
+    </select>
+
+    <select id="getPostByType" resultType="com.central.post.model.Post">
+        select *
+        from post
+        where type = #{type}
+          and #{date} > post.date
+        order by post.date desc
+    </select>
+
+    <select id="getAllPost" resultType="com.central.post.model.Post">
+        select *
+        from post
+        where #{date} > post.date
+        order by post.date desc
+    </select>
+
+    <select id="getPostByUid" resultType="com.central.post.model.Post">
+        select *
+        from post
+        where uid = #{uid}
+          and #{date} > post.date
+        order by post.date desc
+    </select>
+
+    <update id="ReEditPost">
+        update post
+        set title  = #{title},
+            `text` = #{text}
+        where pid = #{pid}
+    </update>
+
+    <update id="PostComment">
+        update post
+        set comments = comments + 1
+        where pid = #{pid}
+    </update>
+
+    <update id="PostDeleteComment">
+        update post
+        set comments = comments - 1
+        where pid = #{pid}
+    </update>
+
+    <delete id="deletePost">
+        delete
+        from post
+        where pid = #{pid}
+    </delete>
+
+    <delete id="deletePostThenComment">
+        delete
+        from post_comment
+        where pid = #{pid}
+    </delete>
+
+</mapper>

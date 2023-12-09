@@ -501,6 +501,7 @@
         <module>buaa-config</module>
         <!-- demo -->
         <module>buaa-demo</module>
+        <module>buaa-business/post-center</module>
     </modules>
 
     <licenses>
