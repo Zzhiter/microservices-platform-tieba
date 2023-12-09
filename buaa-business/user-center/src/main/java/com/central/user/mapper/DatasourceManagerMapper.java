@@ -19,8 +19,8 @@ import java.util.Map;
 public interface DatasourceManagerMapper extends SuperMapper<SysTables> {
     List<Map<String, Object>> queryList(Page<Map<String, Object>> page, @Param("p") Map<String, Object> map);
 
-    // 新增方法：查询所有数据
-    List<Map<String, Object>> queryAll();
+    // 新增方法：查询这个表的数据
+    List<Map<String, Object>> queryAll(@Param("page") int page, @Param("pageSize") int pageSize, @Param("tableName") String tableName);
 
     List<String> queryTableNames();
 
