@@ -21,4 +21,6 @@ public interface IDatasourceManagerService extends ISuperService<SysTables> {
     Long queryTableIdByName(String tableName);
 
     PageResult updateTable(String tableName, Map<String, Object> params);
+
+    void deleteRecordById(Long recordId);
 }

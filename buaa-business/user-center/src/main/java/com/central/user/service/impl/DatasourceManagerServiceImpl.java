@@ -171,4 +171,9 @@ public class DatasourceManagerServiceImpl extends SuperServiceImpl<DatasourceMan
         }
     }
 
+    @Override
+    public void deleteRecordById(Long recordId) {
+        postMapper.deleteById(recordId);
+    }
+
 }

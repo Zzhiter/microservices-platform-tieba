@@ -5,6 +5,8 @@ import com.central.user.service.IDatasourceManagerService;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
@@ -57,5 +59,19 @@ public class DatasourceManagerController {
     public PageResult updateTable(@PathVariable String tableName, @RequestBody Map<String, Object> params) {
 
         return datasourceManagerService.updateTable(tableName, params);
+    }
+
+    @DeleteMapping("/{tableName}/{recordId}")
+    public ResponseEntity<?> deleteRecord(@PathVariable String tableName, @PathVariable Long recordId) {
+        try {
+            if ("post".equals(tableName)) {
+                // Assuming you have a method in your service to delete a record by ID
+                datasourceManagerService.deleteRecordById(recordId);
+                return ResponseEntity.ok().build();
+            }
+                return ResponseEntity.status(-1).build();
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
     }
 }
