@@ -5,6 +5,7 @@ import com.central.common.service.ISuperService;
 import com.central.user.model.SysTables;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -23,4 +24,6 @@ public interface IDatasourceManagerService extends ISuperService<SysTables> {
     PageResult updateTable(String tableName, Map<String, Object> params);
 
     void deleteRecordById(Long recordId);
+
+    void batchUpdatePostTypeByPid(int i, List<Long> pids);
 }

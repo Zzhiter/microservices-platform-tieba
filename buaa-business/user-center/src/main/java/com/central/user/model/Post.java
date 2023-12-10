@@ -22,5 +22,4 @@ public class Post {
     private Integer uid;
     private Integer type;
     private String tenant_id;
-    private String state;
 }

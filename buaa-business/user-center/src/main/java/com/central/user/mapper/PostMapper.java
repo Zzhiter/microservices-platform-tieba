@@ -1,11 +1,10 @@
 package com.central.user.mapper;
 
 import com.central.user.model.Post;
-import org.apache.ibatis.annotations.Delete;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Component;
+
+import java.util.List;
 
 @Component
 @Mapper
@@ -21,4 +20,15 @@ public interface PostMapper {
 
     @Delete("DELETE FROM post WHERE pid = #{pid}")
     void deleteById(@Param("pid") Long pid);
+
+    @Update({
+            "<script>",
+            "UPDATE post SET type = #{postType} WHERE pid IN",
+            "<foreach collection='pids' item='pid' open='(' separator=',' close=')'>",
+            "#{pid}",
+            "</foreach>",
+            "</script>"
+    })
+    void batchUpdatePostTypeByPid(@Param("postType") int postType, @Param("pids") List<Long> pids);
+
 }

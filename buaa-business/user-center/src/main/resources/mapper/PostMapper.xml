@@ -4,8 +4,8 @@
 <mapper namespace="com.central.user.mapper.PostMapper">
     <!-- Add this insert statement if you don't have it -->
     <insert id="insert" parameterType="com.central.user.model.Post">
-        INSERT INTO post (title, text, date, comments, uid, type, tenant_id, state)
-        VALUES (#{title}, #{text}, #{date}, #{comments}, #{uid}, #{type}, #{tenant_id}, #{state})
+        INSERT INTO post (title, text, date, comments, uid, type, tenant_id)
+        VALUES (#{title}, #{text}, #{date}, #{comments}, #{uid}, #{type}, #{tenant_id})
     </insert>
     <update id="updateByPid" parameterType="com.central.user.model.Post">
         UPDATE post
@@ -16,8 +16,7 @@
             comments = #{comments},
             uid = #{uid},
             type = #{type},
-            tenant_id = #{tenant_id},
-            state = #{state}
+            tenant_id = #{tenant_id}
         WHERE pid = #{pid}
     </update>
 <!--    <update id="updateTable" parameterType="map">-->

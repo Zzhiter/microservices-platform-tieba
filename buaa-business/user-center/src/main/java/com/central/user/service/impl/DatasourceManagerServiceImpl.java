@@ -176,4 +176,9 @@ public class DatasourceManagerServiceImpl extends SuperServiceImpl<DatasourceMan
         postMapper.deleteById(recordId);
     }
 
+    @Override
+    public void batchUpdatePostTypeByPid(int i, List<Long> pids) {
+        postMapper.batchUpdatePostTypeByPid(i, pids);
+    }
+
 }
