@@ -1,9 +1,11 @@
 package com.central.post.service;
 
 import com.central.post.model.Post;
+import com.central.post.model.User;
 import com.central.post.exception.Exceptions;
 import com.central.post.exception.ServiceException;
 import com.central.post.mapper.PostMapper;
+import com.central.post.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,10 +15,16 @@ import java.util.List;
 @Service
 public class PostServiceImpl implements PostService {
     private PostMapper postMapper;
+    private UserMapper userMapper;
 
     @Autowired
     public void setPostMapper(PostMapper postMapper) {
         this.postMapper = postMapper;
+    }
+
+    @Autowired
+    public void setUserMapper(UserMapper userMapper) {
+        this.userMapper = userMapper;
     }
 
     @Override
@@ -33,6 +41,8 @@ public class PostServiceImpl implements PostService {
     public Post getPostInfo(Integer pid) {
         Post post = postMapper.getPostByPid(pid);
         if (post == null) throw new ServiceException(Exceptions.PostNotFound);
+        User u = userMapper.getUserByUid(post.getUid());
+        post.setUsername(u.getUsername());
         return post;
     }
 
@@ -54,6 +64,10 @@ public class PostServiceImpl implements PostService {
     public List<Post> getPostByType(Integer type, Date date) {
         List<Post> posts = postMapper.getPostByType(type, date);
         if (posts.size() == 0) throw new ServiceException(Exceptions.PostSearchNone);
+        for (Post p : posts) {
+            User u = userMapper.getUserByUid(p.getUid());
+            p.setUsername(u.getUsername());
+        }
         return posts;
     }
 

@@ -1,5 +1,6 @@
 package com.central.post.controller;
 
+import com.central.post.model.Post;
 import com.central.post.model.User;
 import com.central.post.service.TokenService;
 import com.central.post.service.UserService;
@@ -55,6 +56,15 @@ public class UserController extends BaseController {
     public JsonResult<User> getUserInfoByUid(Integer uid) {
         User user = userService.getUserInfo(uid);
         return new JsonResult<>(ok, user);
+    }
+
+    @RequestMapping("getUserList")
+    public JsonResult<List<User>> getUserList() {
+        List<User> users = userService.getAllUser();
+        JsonResult<List<User>> jsonResult = new JsonResult<>();
+        jsonResult.setState(ok);
+        jsonResult.setData(users);
+        return jsonResult;
     }
 
     @NeedToken

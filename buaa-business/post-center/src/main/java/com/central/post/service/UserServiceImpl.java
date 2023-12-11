@@ -1,5 +1,6 @@
 package com.central.post.service;
 
+import com.central.post.model.Post;
 import com.central.post.model.User;
 
 import com.central.post.mapper.UserMapper;
@@ -8,6 +9,9 @@ import com.central.post.exception.ServiceException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.Date;
+import java.util.List;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -60,5 +64,12 @@ public class UserServiceImpl implements UserService {
         if (!oldPassword.equals(user.getPassword())) throw new ServiceException(Exceptions.UserPasswordNotMatch);
         Integer res = userMapper.updateUserPassword(newPassword, user.getUid());
         if (res != 1) throw new ServiceException(Exceptions.UserUpdateException);
+    }
+
+    @Override
+    public List<User> getAllUser() {
+        List<User> users = userMapper.getUserList();
+        if (users.size() == 0) throw new ServiceException(Exceptions.PostSearchNone);
+        return users;
     }
 }
