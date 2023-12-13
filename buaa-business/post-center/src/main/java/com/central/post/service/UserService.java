@@ -1,6 +1,10 @@
 package com.central.post.service;
 
+import com.central.post.model.Post;
 import com.central.post.model.User;
+
+import java.util.Date;
+import java.util.List;
 
 public interface UserService {
     /**
@@ -52,4 +56,6 @@ public interface UserService {
      * @param user        用户对象
      */
     void updatePassword(String oldPassword, String newPassword, User user);
+
+    List<User> getAllUser();
 }

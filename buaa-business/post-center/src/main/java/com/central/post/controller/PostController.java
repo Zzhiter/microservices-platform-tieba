@@ -57,7 +57,7 @@ public class PostController extends BaseController {
     @RequestMapping("getPostList")
     public JsonResult<List<Post>> getPostList() {
         Date d = new Date();
-        List<Post> list = postService.getPostByType(0, d);
+        List<Post> list = postService.getPostByType(1, d);
         JsonResult<List<Post>> jsonResult = new JsonResult<>();
         jsonResult.setState(ok);
         jsonResult.setData(list);

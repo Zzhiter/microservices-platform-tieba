@@ -23,6 +23,8 @@ public interface UserMapper {
 
     List<User> getUserByName(String keyword);
 
+    List<User> getUserList();
+
     Integer updateUserPassword(String password, Integer uid);
 
     Integer updateUserInfo(User user);

@@ -11,6 +11,7 @@ public class Post {
     private Integer pid;
     private Integer uid;
     private Integer type;
+    private String username;
     private String title;
     private Date date;
     private Integer comments;

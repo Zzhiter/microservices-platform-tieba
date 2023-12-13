@@ -13,6 +13,11 @@
         where uid = #{uid}
     </select>
 
+    <select id="getUserList" resultType="com.central.post.model.User">
+        select *
+        from user
+    </select>
+
     <select id="getUserByName" resultType="com.central.post.model.User">
         select uid, username, avatar
         from user
